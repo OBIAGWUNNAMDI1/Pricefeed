@@ -1,0 +1,25 @@
+.env.example
+coverage
+coverage.json
+typechain-types
+greeter.sol
+.npmignore
+.eslintrc.js
+.eslintignore
+.prettierignore
+.prettierignore
+.prettierrc
+.solhint.json
+.solhintignore
+yarn-error.log
+index.ts
+deploy.ts
+tsconfig.json
+swapper.sol
+node_modules
+
+
+#Hardhat files
+cache
+artifacts
+test
