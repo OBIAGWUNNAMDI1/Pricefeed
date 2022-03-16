@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: MIT
-// An example of a consumer contract that relies on a arbitum rinkeby to get the price of LINK/ETH from chainlink datafeeds.
+// An example of a consumer contract that relies on a ethereum rinkeby to get the price of LINK/ETH from chainlink datafeeds.
 pragma solidity ^0.8.4;
 //import the needed contracts we want to use. 
 import "@chainlink/contracts/src/v0.8/interfaces/AggregatorV3Interface.sol";
@@ -7,13 +7,13 @@ contract PriceFeedConsumer{
 
      AggregatorV3Interface internal priceFeed;
     /**
-    *Network :Ethereum Mainnet
-    *Aggregator = 1INCH/USD
-    *Aggregator address = 0xc929ad75B72593967DE83E7F7Cda0493458261D9
+    *Network :Rinkeby Testnet
+    *Aggregator = LINK/USD
+    *Aggregator address = 0xd8bD0a1cB028a31AA859A21A3758685a95dE4623
     *Decimal = 8 
     */
      constructor() {
-        priceFeed = AggregatorV3Interface(0xc929ad75B72593967DE83E7F7Cda0493458261D9);
+        priceFeed = AggregatorV3Interface(0xd8bD0a1cB028a31AA859A21A3758685a95dE4623);
     }
 
     function getThePrice() public view returns (int, uint) {
