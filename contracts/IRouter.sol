@@ -8,7 +8,7 @@ interface IRouter{
         uint amountOutMin,
         address[] calldata path,
         address to,
-        uint deadline
-        
+        uint deadline) external returns (uint[] memory amounts);
+
  
 }
