@@ -41,15 +41,17 @@ async function Swap() {
    */
 
   // Swaps from LINK TO USDT
-  const SwapMoney = await Router.swapExactTokensForTokens(
+  const SwapLINKUSDT = await Router.swapExactTokensForTokens(
     amount,
     100,
     [LINKAddress, WETHAddress, UsdtAddress],
     LINKHolder,
     1647451431
   );
-  console.log(SwapMoney);
+  console.log(SwapLINKUSDT);
   console.log(`Balance now is ${await UsdtContract.balanceOf(LINKHolder)}`);
+
+  
 }
 Swap().catch((error) => {
   console.error(error);
